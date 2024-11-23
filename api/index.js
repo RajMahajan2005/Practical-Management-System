@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
-app.use("api/v1", router);
+app.use("/api/v1", router);
 
 dbConnect();
 
