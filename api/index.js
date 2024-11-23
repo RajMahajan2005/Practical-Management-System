@@ -18,7 +18,7 @@ app.listen(PORT, () => {
   console.log("Server is running at port:", PORT);
 });
 
-app.get("/",(req,res)=>{
+app.get("api/v1",(req,res)=>{
   res.json({
     success:true,
     message:"Server Running Successfully"
