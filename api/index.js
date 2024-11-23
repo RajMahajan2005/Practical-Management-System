@@ -13,10 +13,6 @@ app.use(express.json());
 app.use("api/v1", router);
 
 dbConnect();
-  
-app.listen(PORT, () => {
-  console.log("Server is running at port:", PORT);
-});
 
 app.get("/",(req,res)=>{
   res.json({
@@ -24,3 +20,9 @@ app.get("/",(req,res)=>{
     message:"Server Running Successfully"
   })
 });
+
+  
+app.listen(PORT, () => {
+  console.log("Server is running at port:", PORT);
+});
+
