@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
-app.use("/", router);
+app.use("api/v1", router);
 
 dbConnect();
   
@@ -18,7 +18,7 @@ app.listen(PORT, () => {
   console.log("Server is running at port:", PORT);
 });
 
-app.get("api/v1",(req,res)=>{
+app.get("/",(req,res)=>{
   res.json({
     success:true,
     message:"Server Running Successfully"
